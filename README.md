@@ -18,6 +18,7 @@ Redis Database Pod: Acts as an in-memory database for fast data access and stora
 
 ![VotingAppArchDiagram](https://github.com/user-attachments/assets/e8c77caa-b715-470d-8bb1-d93f76c5bfc1)
 
+![image](https://github.com/user-attachments/assets/10b9b23b-6e31-49e2-9d00-9530decafc3d)
 
 
 Azure Container Registry (ACR) is a managed, private Docker registry service provided by Microsoft Azure. 
