@@ -24,9 +24,11 @@ Azure Container Registry (ACR) is a managed, private Docker registry service pro
 It allows you to store and manage container images for all types of container deployments. With ACR, you can easily build, push, and pull container images using Docker commands. The service integrates seamlessly with Azure Kubernetes Service (AKS) and other Azure services, ensuring secure and efficient management of containerized applications. ACR supports both Linux and Windows containers, and offers features such as geo-replication, vulnerability scanning, and task automation, making it a robust solution for managing container images in a secure and scalable manner.
 
 Creating Azure Container Registry
+```
 
 az group create --name mcb-vote --location eastus
 az acr create --resource-group mcb-vote --name <acrName> --sku Basic
+```
 
 
 
