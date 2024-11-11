@@ -33,18 +33,22 @@ az acr create --resource-group mcb-vote --name <acrName> --sku Basic
 ![ContainerRegistrary](https://github.com/user-attachments/assets/58bcac40-0628-4c1a-886b-b6c41c22c64e)
 
 Login ACR
-''' 
+```
+
 az acr login --n <acrName> --expose-token
-'''
+```
+
 Save token and perform docker login using below command
 
 docker login <acrName> -u 00000000-0000-0000-0000-000000000000 -p <token>
 
 
 Creating docker image
-''' 
+```
+
 az acr build --image mcb-vote --registry <acrName>  --file Dockerfile
-'''
+```
+
 
 
 
@@ -52,25 +56,31 @@ Building Azure Kubernates Clusture
 
 
 
-'''
+```
+
 az aks create \
 --resource-group mcb-vote \
 --name AKSClusterTCB \
 --node-count 1 \
 --generate-ssh-keys
 
-'''
+```
+
 Associate Azure Container Registratry to Azure Kubernates Clusture
-'''
+```
+
 az aks update -n AKSClusterTCB -g mcb-vote --attach-acr <acrName>  
 
 
-'''
+```
+
 Once container registratry is assoicated with Azure Kubernates Clusture
 we will add get credential for Kubernates cluster
-'''
+```
+
 az aks get-credentials --resource-group mcb-vote --name AKSClusterTCB
-'''
+```
+
 
 We can make changes to YAML file for application configuration so it points to correct image.
 
@@ -84,10 +94,12 @@ kubectl get service --watch
 
 
 Exploring the Cluster
+```
 
 kubectl get nodes
 kubectl get pods
 
+```
 
 ![KubernateServices](https://github.com/user-attachments/assets/4233fa70-799b-40ec-b8b4-74314e967807)
 
